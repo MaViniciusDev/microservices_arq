@@ -35,7 +35,7 @@ public class TaskService {
         taskToUpdate.setDescription(task.getDescription());
         return taskRepository.save(taskToUpdate);
     }
-    public void deleteById(Long id) {
-        taskRepository.deleteById(id);
+    public void delete(Long id) {
+        taskRepository.delete(findById(id));
     }
 }
